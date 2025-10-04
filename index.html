@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diogo Menezes — Consultoria LinkedIn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0A66C2;
+      --dark: #0d1a26;
+      --light: #f4f6f8;
+      --text: #333;
+      --radius: 14px;
+    }
+
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family:'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height:1.6;
+    }
+    a {text-decoration:none;}
+
+    header {
+      background: var(--dark);
+      color:#fff;
+      text-align:center;
+      padding:1.2rem 1rem;
+    }
+    header h1 {
+      font-family:'Montserrat', sans-serif;
+      font-size:1.8rem;
+    }
+
+    /* HERO */
+    .hero {
+      text-align:center;
+      padding:4rem 1rem 5rem;
+      background: linear-gradient(135deg, #0A66C2, #003A75);
+      color:#fff;
+    }
+    .hero img {
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:1rem;
+      border:3px solid #fff;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+    .hero h2 {
+      font-family:'Montserrat', sans-serif;
+      font-size:2rem;
+      max-width:700px;
+      margin:0 auto 1rem;
+    }
+    .hero p {
+      color:#e6e6e6;
+      max-width:600px;
+      margin:0 auto 2rem;
+      font-size:1.1rem;
+    }
+    .video-wrapper {
+      max-width:800px;
+      margin:0 auto 2rem;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:0 8px 30px rgba(0,0,0,0.3);
+    }
+    .video-wrapper iframe {
+      width:100%;
+      height:450px;
+      border:0;
+      display:block;
+    }
+    .btn {
+      display:inline-block;
+      background:#fff;
+      color:var(--primary);
+      padding:1rem 2.2rem;
+      border-radius:var(--radius);
+      font-weight:700;
+      transition:transform .3s, background .3s;
+    }
+    .btn:hover {
+      background:#e6e6e6;
+      transform:translateY(-4px);
+    }
+
+    /* BENEFÍCIOS */
+    .services {
+      background:#fff;
+      padding:4rem 1rem;
+      text-align:center;
+    }
+    .services h2 {
+      font-family:'Montserrat', sans-serif;
+      color:var(--primary);
+      font-size:1.8rem;
+      margin-bottom:2rem;
+    }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:1.5rem;
+      max-width:1000px;
+      margin:0 auto;
+    }
+    .card {
+      background:#fff;
+      border-radius:var(--radius);
+      padding:2rem 1.5rem;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      transition:transform .25s, box-shadow .25s;
+    }
+    .card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 12px 26px rgba(0,0,0,0.14);
+    }
+    .card h3 {
+      color:var(--dark);
+      font-family:'Montserrat', sans-serif;
+      font-size:1.2rem;
+      margin-bottom:.8rem;
+    }
+    .card p {
+      color:#555;
+      font-size:.95rem;
+    }
+
+    /* DEPOIMENTOS */
+    .testimonials {
+      background:var(--light);
+      padding:4rem 1rem;
+      text-align:center;
+    }
+    .testimonials h2 {
+      font-family:'Montserrat', sans-serif;
+      color:var(--primary);
+      font-size:1.8rem;
+      margin-bottom:2rem;
+    }
+    .testimonials .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.5rem;
+      max-width:1000px;
+      margin:0 auto;
+    }
+    .testimonial-card {
+      background:#fff;
+      border-radius:var(--radius);
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      padding:2rem 1.5rem;
+      text-align:left;
+      transition:transform .25s, box-shadow .25s;
+    }
+    .testimonial-card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 12px 30px rgba(0,0,0,0.15);
+    }
+    .testimonial-card img {
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:1rem;
+    }
+    .testimonial-card h4 {
+      font-weight:600;
+      margin-bottom:.5rem;
+      color:var(--dark);
+    }
+    .testimonial-card p {
+      color:#666;
+      font-size:.95rem;
+    }
+
+    /* CTA FINAL */
+    .cta-final {
+      background:var(--primary);
+      color:#fff;
+      text-align:center;
+      padding:4rem 1rem;
+    }
+    .cta-final h2 {
+      font-family:'Montserrat', sans-serif;
+      font-size:1.6rem;
+      margin-bottom:1.5rem;
+    }
+    .cta-final a {
+      background:#fff;
+      color:var(--primary);
+      padding:1rem 2rem;
+      border-radius:var(--radius);
+      font-weight:700;
+      transition:background .3s;
+    }
+    .cta-final a:hover {
+      background:#e6e6e6;
+    }
+
+    footer {
+      background:#111;
+      color:#ccc;
+      text-align:center;
+      padding:2rem 1rem;
+      font-size:.9rem;
+    }
+
+    @media (max-width:768px){
+      .hero h2{font-size:1.6rem;}
+      .video-wrapper iframe{height:300px;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Diogo Menezes — Consultoria LinkedIn</h1>
+  </header>
+
+  <section class="hero">
+    <img src="https://i.imgur.com/VcR7C5E.png" alt="Diogo Menezes">
+    <h2>Transforme seu perfil no LinkedIn em uma máquina de oportunidades</h2>
+    <p>Assista ao vídeo e descubra como profissionais comuns estão se tornando autoridade no LinkedIn — e como você pode ser o próximo.</p>
+    
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/BbEVumEOwoE" title="Motivational Video" allowfullscreen></iframe>
+    </div>
+
+    <a href="https://wa.me/5511987977362" class="btn">Quero minha consultoria agora</a>
+  </section>
+
+  <section class="services">
+    <h2>O que você vai alcançar</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Autoridade Instantânea</h3>
+        <p>Seu perfil vai transmitir credibilidade e atrair oportunidades de negócio e recrutadores.</p>
+      </div>
+      <div class="card">
+        <h3>Conteúdo Estratégico</h3>
+        <p>Aprenda a publicar como um líder de mercado, gerando engajamento e posicionamento real.</p>
+      </div>
+      <div class="card">
+        <h3>Networking Inteligente</h3>
+        <p>Conecte-se com as pessoas certas e crie uma rede que abre portas para resultados concretos.</p>
+      </div>
+      <div class="card">
+        <h3>Consultoria Personalizada</h3>
+        <p>Receba um plano prático e direto, adaptado ao seu perfil, objetivos e nicho de atuação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Resultados de quem já aplicou</h2>
+    <div class="grid">
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente 1">
+        <h4>Mariana Santos</h4>
+        <p>“Depois da consultoria, meu perfil passou a atrair conexões de alto nível e recebi 3 propostas em uma semana.”</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Cliente 2">
+        <h4>João Almeida</h4>
+        <p>“O Diogo me ajudou a transformar meu perfil em uma vitrine profissional. Hoje sou reconhecido pelo meu trabalho.”</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente 3">
+        <h4>Carla Ribeiro</h4>
+        <p>“Meu engajamento triplicou! O plano de conteúdo que recebi mudou totalmente minha presença no LinkedIn.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <h2>Está pronto para elevar sua autoridade no LinkedIn?</h2>
+    <a href="https://wa.me/5511987977362">Falar agora no WhatsApp</a>
+  </section>
+
+  <footer>
+    © 2025 Diogo Menezes — Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
